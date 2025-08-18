@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import './App.css'
-
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home'
 function App() {
 
   return (
     <>
-      <h1>hello</h1>
+      {/* <Home /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
     </>
   )
 }
