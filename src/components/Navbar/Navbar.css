@@ -1,0 +1,21 @@
+.navbar{
+    background-color: #5B913B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+.logo h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Jomhuria', Times, serif;
+    color: white;
+    cursor: pointer;
+}
+
+.icon_cart{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
