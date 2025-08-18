@@ -1,0 +1,82 @@
+.restaurants_section {
+    margin-top: 100px;
+}
+
+.restaurants_header h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Jomhuria', Times, serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+
+}
+
+.restaurants_header {
+    display: flex;
+    align-items: center;
+    border-left: 5px solid white;
+    /* background-color: blueviolet; */
+    height: 100%;
+    padding: 0 5px;
+
+}
+
+.restaurants_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    /* background-color: brown; */
+    margin-top: 50px;
+}
+
+.restaurant_card {
+    
+    /* background-color: blue; */
+    position: relative;
+    /* box-shadow: 10px 10px 15px black; */
+}
+
+.restaurant_card img {
+    /* width: fit-content; */
+    height: 300px;
+    width: 390px;
+    border-radius: 10px;
+
+}
+.card_content{
+    position: absolute;
+    /* top: 0; */
+    bottom: 0%;
+    padding: 10px 0;
+    
+    background-color: rgba(0, 0, 0, 0.767);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+}
+.card_content h1 {
+    color: white;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-family: 'Poppins', Times, serif;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.restaurant_ratings{
+    color: white;
+    font-family: 'Poppins', Times, serif;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;gap: 0.2rem;
+}
+
+.card_content h1:hover + .restaurant_card {
+  filter: brightness(40%);
+  color: brown;
+}}

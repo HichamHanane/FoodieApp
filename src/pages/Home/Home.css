@@ -1,5 +1,6 @@
 .home_page_container{
-    height: 100lvh;
+    height: 100%;
     background-color: #5B913B;
     /* font-family: 'Jomhuria', Times, serif; */
+    padding: 0 70px;
 }

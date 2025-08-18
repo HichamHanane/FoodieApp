@@ -1,0 +1,227 @@
+.hero_section {
+    /* background-color: burlywood; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero_heading h1 {
+    position: relative;
+    z-index: 2;
+    /* overflow: hidden; */
+    font-family: 'Jomhuria', Times, serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 25rem;
+    background: -webkit-linear-gradient(white, #5B913B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    /* background-color: blue; */
+    /* height: 10%; */
+    width: 100%;
+    letter-spacing: 1.2rem;
+    animation: text-fade-in 5000ms ease forwards alternate;
+}
+
+@keyframes text-fade-in {
+    from {
+        opacity: 0;
+        translate: 0 -50px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+
+    }
+}
+
+
+
+.all_restaurants {
+    padding: 15px;
+    background-color: white;
+    color: #5B913B;
+    font-family: 'Poppins', Times, serif;
+    border: 2px solid #5B913B;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.all_restaurants:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    translate: 0 -10px;
+}
+
+.navigation_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute;
+    top: 65%; */
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.social_media .social_icon {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social_icon:hover {
+    opacity: 0.8;
+}
+
+
+.scrolldown {
+    --color: white;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: relative;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    cursor: pointer;
+    animation: text-fade-in 5000ms ease forwards alternate;
+
+}
+
+.scrolldown::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: var(--color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+    0% {
+        opacity: 0;
+        height: 6px;
+    }
+
+    40% {
+        opacity: 1;
+        height: 10px;
+    }
+
+    80% {
+        transform: translate(0, 20px);
+        height: 10px;
+        opacity: 0;
+    }
+
+    100% {
+        height: 3px;
+        opacity: 0;
+    }
+}
+
+.chevrons {
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    margin-top: 48px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chevrondown {
+    margin-top: -6px;
+    position: relative;
+    border: solid var(--color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+    animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+    animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+
+.random_dishes .sandwich {
+    position: absolute;
+    top: 30%;
+    z-index: 99;
+    left: 0;
+    font-size: 10rem;
+    color: white;
+    width: 300px;
+    animation: image_fade_in 5000ms ease forwards alternate;
+    /* z-index: 99; */
+    /* background-color: blue; */
+}
+
+.random_dishes .pizza {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    font-size: 10rem;
+    color: white;
+    width: 300px;
+    animation: image_fade_in 5000ms ease forwards alternate;
+
+    /* background-color: blue; */
+}
+
+.random_dishes .plate {
+    position: absolute;
+    top: -10%;
+    right: 35%;
+    font-size: 10rem;
+    color: white;
+    width: 300px;
+    animation: image_fade_in 5000ms ease forwards alternate;
+
+    /* background-color: blue; */
+}
+
+@keyframes image_fade_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
