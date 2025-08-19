@@ -76,7 +76,10 @@
     align-items: center;gap: 0.2rem;
 }
 
-.card_content h1:hover + .restaurant_card {
-  filter: brightness(40%);
-  color: brown;
+.restaurant_card_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
 }
+
