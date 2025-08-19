@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <header className='navbar'>
             <div className="logo">
-                <h1>foodieApp</h1>
+                <Link to='/' className="logo">foodieApp</Link>
             </div>
             <nav className='nav_links'>
                 <Link to="#" className='nav_link' ><GiShoppingCart className='icon_cart'/></Link>

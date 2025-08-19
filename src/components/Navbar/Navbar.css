@@ -7,8 +7,9 @@
     padding-top: 20px;
 }
 
-.logo h1{
+.logo{
     font-size: 5rem;
+    text-decoration: none;
     text-transform: uppercase;
     font-family: 'Jomhuria', Times, serif;
     color: white;

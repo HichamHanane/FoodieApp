@@ -97,7 +97,7 @@
     box-sizing: border-box;
     margin-bottom: 16px;
     cursor: pointer;
-    animation: text-fade-in 5000ms ease forwards alternate;
+    animation: image_fade_in 5000ms ease forwards alternate;
 
 }
 
