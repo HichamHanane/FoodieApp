@@ -11,14 +11,14 @@ function Restaurants() {
   const { restaurants } = useSelector((state) => state.restaurant)
   const dispatch = useDispatch()
   useEffect(() => {
-    // dispatch(getRestaurants())
+    dispatch(getRestaurants())
   }, [])
   console.log('Restaurants :', restaurants);
 
   return (
     <section className='restaurants_section'>
       <div className="restaurants_header">
-        <h1>Our Restaurants</h1> <button onClick={() => dispatch(getRestaurants())}>get restaurants</button>
+        <h1>Our Restaurants</h1>
       </div>
       <div className="restaurant_card_container">
 
@@ -31,7 +31,7 @@ function Restaurants() {
         }
       </div>
 
-      <div className="restaurant_card_container">
+      {/* <div className="restaurant_card_container">
         <div className='restaurant_card_1'>
           <img src="public\images\restaurant (1).jpg" alt="restaurant image" />
           <Link className='restaurant_title_1'>Restaurant Title</Link>
@@ -64,7 +64,7 @@ function Restaurants() {
             <p className="rating"><IoMdStar color='#5B913B' />5.8</p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       
     </section>

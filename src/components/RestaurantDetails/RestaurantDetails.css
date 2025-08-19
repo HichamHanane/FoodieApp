@@ -1,0 +1,49 @@
+.details_container {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80lvh;
+}
+
+.content_container{
+    width: 600px;
+}
+
+.details_restaurant_name {
+    color: #C9392F;
+    text-transform: uppercase;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    border-left: 5px solid #C9392F;
+    padding-left: 5px;
+}
+
+.details_full_adresse {
+    margin-top: 10px;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.more_restaurant_information {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details_city,
+.details_phone,
+.details_country,
+.details_rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+}
