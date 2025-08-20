@@ -1,0 +1,117 @@
+.restaurant_menu_section {
+    margin-top: 50px;
+    padding: 0 70px;
+    /* background-color: burlywood; */
+}
+
+.restaurant_menu_header {
+    font-family: 'Jomhuria', Times, serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #5B913B;
+}
+
+.menu_container {
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+
+.no_menu_available{
+    position: relative;
+    left: 100%;
+   margin: 0 auto;
+   background-color: rgb(255, 255, 255); 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+   height: 100px;
+   width: 400px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 50px;
+}
+
+.no_menu_available p{
+    color: #5B913B;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.menu_card {
+    width: 250px;
+    /* height: 200px; */
+    background-color: #5B913B;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    /* margin-bottom: 100px; */
+    /* padding: 10px; */
+    transition: 0.3s;
+}
+.menu_card:hover{
+    translate: 0 -10px;
+}
+
+.food_image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+.no_photo_available{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #5B913B;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+
+}
+
+.food_name {
+    padding: 10px;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.menu_card_bottom {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food_price {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.menu_card_bottom button{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid white;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu_card_bottom button:hover{
+    background-color: white;
+    color: #5B913B;
+    translate: 0 -10px;
+}

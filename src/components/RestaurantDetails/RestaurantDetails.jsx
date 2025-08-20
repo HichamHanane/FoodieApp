@@ -6,28 +6,24 @@ import { TbStarFilled } from 'react-icons/tb'
 import { AiOutlineGlobal } from 'react-icons/ai'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { getRestaurantDetails } from '../../features/RestaurantSlice'
+import { getRestaurantDetails, getRestaurantMenu } from '../../features/RestaurantSlice'
 
 
 function RestaurantDetails() {
     const {id}=useParams()
     const {restaurantDetails} = useSelector((state)=>state.restaurant);
-    const {data}= restaurantDetails
+    const {data}= restaurantDetails;
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        console.log('Restaurant id :',id);
-        
         dispatch(getRestaurantDetails(id))
-        console.log('Restaurant details : ',data);
-        
     },[])
     return (
         <div className='details_container'>
           <div className='content_container'>
              <h1 className='details_restaurant_name'>{data?.name}</h1> 
              <p className="details_full_adresse"><BiMap color='#C9392F'/>  {data?.address1}</p>
-             <img src="\images\restaurant (2).jpg" alt="" className="deatils_image"  width="600"/>
+             <img src={`/images/restaurant (${Math.floor(Math.random() * 4)}).jpg`} alt="restaurant image" className="deatils_image"  width="600" height="300"/>
              {/* <img src={data?.photo_url} alt="" className="deatils_image"  width="600" height="350"/> */}
 
              <div className="more_restaurant_information">
