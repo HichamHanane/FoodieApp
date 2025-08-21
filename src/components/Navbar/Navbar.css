@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background-color: #5B913B;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
     z-index: 9999;
 }
 
-.logo{
+.logo {
     font-size: 5rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -19,8 +19,27 @@
     cursor: pointer;
 }
 
-.icon_cart{
+.icon_cart {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
+}
+
+.nav_links {
+    /* background-color: blue; */
+    position: relative;
+}
+
+.command_number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    padding: 2px;
+    border-radius: 50%;
+    color: white;
+    font-family: 'Poppins', Times, serif;
+    font-size: 0.5rem;
+    font-weight: bold;
+    
 }

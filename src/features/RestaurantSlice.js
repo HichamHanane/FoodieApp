@@ -74,7 +74,8 @@ export const getRestaurantMenu = createAsyncThunk('restaurant/getRestaurantMenu'
         };
         let response = await axios.get(options.url, { params: options.params, headers: options.headers });
         console.log('Restaurant menu response :', response);
-        let get20Menu = response.data.menus.slice(0,21);
+        let get20Menu = response.data.menus.slice(0,20);
+        localStorage.setItem('restaurant-menu', JSON.stringify(get20Menu))
         return get20Menu;
     } catch (error) {
         console.log('Error while getting restaurant menu :',error);
