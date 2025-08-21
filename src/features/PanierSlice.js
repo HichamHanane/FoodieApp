@@ -32,10 +32,22 @@ export const PanierSlice = createSlice({
             } catch (error) {
                 console.log("Error while adding to panier : ", error);
             }
+        },
+        Delete: (state, action) => {
+            try {
+                console.log('dispatch delete :' , action);
+                let filterdArray = state.panier_list.filter((p)=> p?.['Food Name'] != action.payload);
+                state.panier_list = filterdArray,
+                state.number_of_commands -= 1
+                
+            } catch (error) {
+                console.log('Error while deleting a menu from panier : ', error);
+
+            }
         }
     }
     // extraReducers
 })
 
-export const { Add } = PanierSlice.actions
+export const { Add , Delete } = PanierSlice.actions
 export default PanierSlice.reducer

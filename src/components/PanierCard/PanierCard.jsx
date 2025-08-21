@@ -1,8 +1,11 @@
 import React from 'react'
 import './PanierCard.css'
 import { RiDeleteBin5Line } from 'react-icons/ri'
+import { useDispatch } from 'react-redux'
+import { Delete } from '../../features/PanierSlice'
 
 function PanierCard({ menu }) {
+    const dispatch = useDispatch()
     return (
         <div className="panier_card">
             {
@@ -13,7 +16,7 @@ function PanierCard({ menu }) {
                 <p className="panier_food_name">{menu?.['Food Name']}</p>
                 <p className="panier_food_price">{menu?.Price}$</p>
             </div>
-            <RiDeleteBin5Line className='delete_icon' />
+            <RiDeleteBin5Line className='delete_icon' onClick={()=> dispatch(Delete(menu?.['Food Name']))}/>
         </div>
     )
 }
