@@ -1,0 +1,46 @@
+.panier_section {
+    position: fixed;
+    background-color: whitesmoke;
+    height: 100%;
+    z-index: 99999;
+    width: 35%;
+    right: 0;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.562);
+}
+
+.panier_header h3 {
+    color: #5B913B;
+    text-transform: uppercase;
+    font-family: 'Poppins', Times, serif;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.panier_list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: scroll;
+    height: 60%;
+    /* background-color: blueviolet; */
+}
+
+.panier_empty {
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    height: 100px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.panier_empty p {
+    font-family: 'Poppins', Times, serif;
+    text-transform: capitalize;
+
+}

@@ -1,0 +1,21 @@
+import React from 'react'
+import './PanierCard.css'
+import { RiDeleteBin5Line } from 'react-icons/ri'
+
+function PanierCard({ menu }) {
+    return (
+        <div className="panier_card">
+            {
+                menu?.Photo == "" ? <div className="panier_no_photo">photo Unavailable</div>
+                    : <img src="/images/restaurant (2).jpg" alt="menu image" srcset="" width="100px" />
+            }
+            <div className="panier_food_name_price">
+                <p className="panier_food_name">{menu?.['Food Name']}</p>
+                <p className="panier_food_price">{menu?.Price}$</p>
+            </div>
+            <RiDeleteBin5Line className='delete_icon' />
+        </div>
+    )
+}
+
+export default PanierCard

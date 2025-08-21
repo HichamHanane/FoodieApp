@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getRestaurantMenu } from '../../features/RestaurantSlice'
 import { CgUnavailable } from 'react-icons/cg'
+import { Add } from '../../features/PanierSlice'
 
 
 function RestaurantMenu() {
@@ -19,7 +20,7 @@ function RestaurantMenu() {
                 <div>
                     {
                         menu?.Photo == ""
-                            ? <p className='no_photo_available'>no photo available</p>
+                            ? <p className='no_photo_available'> photo Unavailable</p>
                             : <img src={menu?.Photo} alt="resturant image" srcset="" className='food_image' loading='lazy' />
                     }
 
@@ -27,7 +28,7 @@ function RestaurantMenu() {
                 <p className="food_name">{menu?.['Food Name']}</p>
                 <div className="menu_card_bottom">
                     <p className="food_price">{menu?.Price}$</p>
-                    <button><FaPlus />Ajouter au panier</button>
+                    <button onClick={()=>dispatch(Add(menu))}><FaPlus />Ajouter au panier</button>
                 </div>
 
             </div>
@@ -52,7 +53,7 @@ function RestaurantMenu() {
                         menu?.length == 0
                             ? <div className='no_menu_available'>
                                 <CgUnavailable color='#5B913B' size="50px" />
-                                <p>No menu available now </p>
+                                <p>menu Unavailable now </p>
                             </div>
                             : displayMenu
                     }

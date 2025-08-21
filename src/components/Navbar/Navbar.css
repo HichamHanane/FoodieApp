@@ -43,3 +43,7 @@
     font-weight: bold;
     
 }
+.nav_link{
+    cursor: pointer;
+}
+

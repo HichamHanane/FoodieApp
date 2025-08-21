@@ -1,0 +1,43 @@
+.panier_card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
+}
+.panier_no_photo{
+    width: 100px;
+    height: 50px;
+    text-transform: capitalize;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #5B913B;
+    font-family: 'Poppins', Times, serif;
+    font-weight: bold;
+}
+.panier_food_name {
+    font-family: 'Poppins', Times, serif;
+    color: #5B913B;
+    text-transform: capitalize;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.panier_food_price {
+    font-family: 'Poppins', Times, serif;
+    color: black;
+    font-size: 0.7rem;
+}
+
+.delete_icon {
+    margin-left: auto;
+    padding-right: 10px;
+    color: #5B913B;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
