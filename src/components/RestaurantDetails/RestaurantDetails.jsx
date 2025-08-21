@@ -16,6 +16,7 @@ function RestaurantDetails() {
     const dispatch = useDispatch();
 
     useEffect(()=>{
+        window.scroll(0,0)
         dispatch(getRestaurantDetails(id))
     },[])
     return (

@@ -18,25 +18,25 @@
     gap: 20px;
     justify-content: center;
     margin-top: 40px;
-    
+
 }
 
-.no_menu_available{
+.no_menu_available {
     position: relative;
     left: 100%;
-   margin: 0 auto;
-   background-color: rgb(255, 255, 255); 
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-   height: 100px;
-   width: 400px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 50px;
+    height: 100px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
-.no_menu_available p{
+.no_menu_available p {
     color: #5B913B;
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -52,7 +52,8 @@
     /* padding: 10px; */
     transition: 0.3s;
 }
-.menu_card:hover{
+
+.menu_card:hover {
     translate: 0 -10px;
 }
 
@@ -62,7 +63,8 @@
     object-fit: cover;
     border-radius: 16px 16px 0 0;
 }
-.no_photo_available{
+
+.no_photo_available {
     width: 100%;
     height: 150px;
     display: flex;
@@ -82,7 +84,7 @@
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-weight: 300;
-    
+
 }
 
 .menu_card_bottom {
@@ -98,7 +100,7 @@
     font-weight: 300;
 }
 
-.menu_card_bottom button{
+.menu_card_bottom button {
     display: flex;
     align-items: center;
     gap: 0.2rem;
@@ -112,8 +114,51 @@
     transition: 0.3s;
 }
 
-.menu_card_bottom button:hover{
+.menu_card_bottom button:hover {
     background-color: white;
     color: #5B913B;
     translate: 0 -10px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .restaurant_menu_section {
+        padding: 0 40px;
+    }
+
+    .menu_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu_card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurant_menu_section {
+        padding: 0 20px;
+    }
+
+    .menu_container {
+        grid-template-columns: 1fr;
+    }
+
+        .restaurant_menu_header h1 {
+            font-size: 3rem;
+        }
+
+    .menu_card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .no_menu_available {
+        width: 90%;
+        left: 0;
+        transform: translateX(0%);
+    }
 }

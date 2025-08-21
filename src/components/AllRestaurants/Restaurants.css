@@ -1,5 +1,6 @@
 .restaurants_section {
     margin-top: 100px;
+    padding: 0 50px;
 }
 
 .restaurants_header h1 {
@@ -77,10 +78,11 @@
 }
 
 .restaurant_card_container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    gap: 20px; /* Augmente l'espace entre les cartes pour un meilleur rendu */
+    width: 100%;
+    margin-top: 50px;
 }
 

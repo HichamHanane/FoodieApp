@@ -55,5 +55,37 @@
     color: #5B913B;
     font-size: 1.2rem;
     cursor: pointer;
-     flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .panier_card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .panier_no_photo {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #5B913B;
+        padding-bottom: 10px;
+    }
+
+    .panier_food_name {
+        font-size: 0.9rem;
+        display: block;
+    }
+
+    .panier_food_name_price {
+        width: 100%;
+    }
+
+    .delete_icon {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

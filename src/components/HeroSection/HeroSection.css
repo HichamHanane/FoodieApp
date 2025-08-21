@@ -224,5 +224,37 @@
     to {
         opacity: 1;
     }
+
+
+}
+@media (max-width: 1024px) {
+    .hero_heading h1 {
+        font-size: 15rem; 
+    }
+
+    .random_dishes .plate,
+    .random_dishes .sandwich,
+    .random_dishes .pizza {
+        display: none; 
+    }
 }
 
+
+@media (max-width: 768px) {
+    .hero_heading h1 {
+        font-size: 8rem; 
+        letter-spacing: 0.5rem;
+    }
+    .hero_section{
+        height: 100svh;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero_heading h1 {
+        font-size: 5rem; 
+        letter-spacing: 0.2rem;
+    }
+}

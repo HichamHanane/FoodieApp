@@ -47,3 +47,28 @@
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.7rem;
 }
+
+
+@media (max-width: 1024px) {
+    .content_container {
+        width: 90%; 
+    }
+}
+@media (max-width: 768px) {
+    .details_container {
+        padding: 20px; 
+    }
+    
+    .content_container {
+        width: 100%; 
+    }
+
+    .details_restaurant_name {
+        font-size: 1.5rem; 
+    }
+
+    
+    .deatils_image{
+        width: 100%;
+    }
+}

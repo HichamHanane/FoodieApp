@@ -1,19 +1,21 @@
 .restaurant_card_1{
     /* height: 300px; */
     background-color: white;
-    width: 300px;
+    width: clamp(250px, 45%, 350px);
     padding: 10px;
     /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.329); */
     border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
 
+.restaurant_card_1:hover {
+    transform: translateY(-5px); 
 }
 
 .restaurant_card_1 img{
     height: 200px;
     width: 100%;
-    /* border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 50px; */
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.534);
     margin-bottom: 10px;
 }

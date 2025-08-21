@@ -44,3 +44,22 @@
     text-transform: capitalize;
 
 }
+
+
+@media (max-width: 1024px) {
+    .panier_section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .panier_section {
+        width: 100%; 
+        box-shadow: none; 
+    }
+
+    .panier_empty {
+        width: 100%;
+    }
+    
+}

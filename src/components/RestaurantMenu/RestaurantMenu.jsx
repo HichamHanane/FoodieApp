@@ -35,6 +35,7 @@ function RestaurantMenu() {
         )
 
     })
+
     useEffect(() => {
         let restu_menu = JSON.parse(localStorage.getItem('restaurant-menu'));
 
@@ -42,6 +43,7 @@ function RestaurantMenu() {
         setMenu(restu_menu)
         // dispatch(getRestaurantMenu(id));
     }, [])
+    
     return (
         <>
             <div className='restaurant_menu_section'>

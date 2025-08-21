@@ -41,9 +41,58 @@
     font-family: 'Poppins', Times, serif;
     font-size: 0.5rem;
     font-weight: bold;
-    
+
 }
-.nav_link{
+
+.nav_link {
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .logo {
+        font-size: 3.5rem;
+    }
+
+    .icon_cart {
+        font-size: 1.3rem;
+    }
+
+    .nav_links {
+        gap: 8px;
+    }
+
+    .command_number {
+        font-size: 0.45rem;
+        right: -3px;
+    }
+}
+
+/* Styles pour les téléphones mobiles (petits écrans) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .icon_cart {
+        font-size: 1.2rem;
+    }
+
+    .nav_links {
+        gap: 5px;
+    }
+
+    .command_number {
+        font-size: 0.4rem;
+        right: -5px;
+        top: -5px;
+    }
+}
