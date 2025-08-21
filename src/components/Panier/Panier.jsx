@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { CgUnavailable } from 'react-icons/cg';
 function Panier() {
     let { panier_list } = useSelector((state) => state.panier);
-    const displatPanierCards = panier_list?.map((p, index) => <PanierCard menu={p} />)
+    const displatPanierCards = panier_list?.map((p, index) => <PanierCard menu={p} key={index}/>)
     return (
         <div className='panier_section'>
             <div className="panier_header">

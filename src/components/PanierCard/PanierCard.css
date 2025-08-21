@@ -6,7 +6,8 @@
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.349);
     border-radius: 10px;
 }
-.panier_no_photo{
+
+.panier_no_photo {
     width: 100px;
     height: 50px;
     text-transform: capitalize;
@@ -17,7 +18,19 @@
     border-right: 1px solid #5B913B;
     font-family: 'Poppins', Times, serif;
     font-weight: bold;
+    flex-shrink: 0;
 }
+
+.panier_food_name_price {
+    /* Added this class to group the name and price */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Allows this container to take up all available space */
+    min-width: 0;
+    /* Allows the text to truncate correctly */
+}
+
 .panier_food_name {
     font-family: 'Poppins', Times, serif;
     color: #5B913B;
@@ -26,6 +39,8 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .panier_food_price {
@@ -40,4 +55,5 @@
     color: #5B913B;
     font-size: 1.2rem;
     cursor: pointer;
+     flex-shrink: 0;
 }

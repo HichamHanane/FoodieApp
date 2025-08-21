@@ -16,7 +16,7 @@ function PanierCard({ menu }) {
                 <p className="panier_food_name">{menu?.['Food Name']}</p>
                 <p className="panier_food_price">{menu?.Price}$</p>
             </div>
-            <RiDeleteBin5Line className='delete_icon' onClick={()=> dispatch(Delete(menu?.['Food Name']))}/>
+            <RiDeleteBin5Line className='delete_icon' onClick={()=> dispatch(Delete(menu?.['Food Name']))} />
         </div>
     )
 }
