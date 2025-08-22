@@ -1,12 +1,62 @@
-# React + Vite
+# FoodieApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FoodieApp est une application web développée avec **React** et **Vite** permettant de découvrir des restaurants, consulter leurs menus et gérer un panier de commandes.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Affichage d'une liste de restaurants avec leurs détails
+- Consultation du menu de chaque restaurant
+- Ajout et suppression de plats dans le panier
+- Calcul automatique du total du panier
+- Interface responsive et moderne
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone le projet :
+   ```bash
+   git clone <url-du-repo>
+   ```
+2. Installe les dépendances :
+   ```bash
+   npm install
+   ```
+3. Configure la clé API RapidAPI dans le fichier `.env` :
+   ```
+   VITE_RAPIDAPI_KEY=ta_clé_api
+   ```
+4. Lance le serveur de développement :
+   ```bash
+   npm run dev
+   ```
+
+## Scripts disponibles
+
+- `npm run dev` : Démarre le serveur de développement
+- `npm run build` : Génère la version de production
+- `npm run preview` : Prévisualise la version de production
+- `npm run lint` : Analyse le code avec ESLint
+
+## Structure du projet
+
+- `src/components` : Composants réutilisables (Navbar, Footer, Panier, etc.)
+- `src/pages` : Pages principales (Accueil, Détails du restaurant)
+- `src/features` : Slices Redux pour la gestion d'état
+- `src/store` : Configuration du store Redux
+
+## Technologies utilisées
+
+- React
+- Redux Toolkit
+- Vite
+- Axios
+- React Router
+- Sonner (notifications)
+- RapidAPI (Yelp Business API)
+
+## Auteur
+
+Projet réalisé dans le cadre du Bootcamp Simplon.
+
+---
+
+N'hésite pas à contribuer ou à signaler des problèmes
