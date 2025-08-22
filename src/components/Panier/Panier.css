@@ -22,8 +22,26 @@
     flex-direction: column;
     gap: 1.5rem;
     overflow-y: scroll;
-    height: 60%;
+    height: 55%;
     /* background-color: blueviolet; */
+}
+.panier_list::-webkit-scrollbar {
+    width: 8px;
+    /* Largeur de la barre de défilement */
+}
+
+.panier_list::-webkit-scrollbar-track {
+    background: #333;
+    /* Couleur de la "piste" de la barre de défilement */
+    border-radius: 10px;
+}
+
+.panier_list::-webkit-scrollbar-thumb {
+    background-color: #5B913B;
+    /* Couleur du "pouce" (la poignée) de la barre de défilement */
+    border-radius: 10px;
+    border: 2px solid #333;
+    /* Un peu d'espace autour du pouce */
 }
 
 .panier_empty {
@@ -43,6 +61,13 @@
     font-family: 'Poppins', Times, serif;
     text-transform: capitalize;
 
+}
+
+.panier_total p{
+    font-family: 'Poppins', Times, serif;
+    color: black;
+    padding: 20px;
+    text-transform: capitalize;
 }
 
 

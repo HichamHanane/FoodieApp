@@ -20,17 +20,18 @@ export const PanierSlice = createSlice({
     initialState: {
         panier_list: [],
         number_of_commands: 0,
+        total: 0,
         isLoading: false,
         error: null
     },
     reducers: {
         Add: (state, action) => {
             try {
+                console.log("dispatch successfully :", action);
                 state.panier_list.push(action.payload);
                 state.number_of_commands += 1
-                console.log("dispatch successfully :", action);
+                state.total += Number(action.payload.Price)
                 toast.success('New Plate was Added successfully To Panier ')
-
 
             } catch (error) {
                 console.log("Error while adding to panier : ", error);
@@ -38,12 +39,16 @@ export const PanierSlice = createSlice({
         },
         Delete: (state, action) => {
             try {
-                console.log('dispatch delete :' , action);
-                let filterdArray = state.panier_list.filter((p)=> p?.['Food Name'] != action.payload);
-                state.panier_list = filterdArray,
+                console.log('dispatch delete :', action);
+                let filterdArray = state.panier_list.filter((p) => p?.['Food Name'] != action.payload.name);
+                state.panier_list = filterdArray
                 state.number_of_commands -= 1
-                toast.success('Plate was deleted successfully ')
+                // console.log('priiiice : 'action.payload.price);
                 
+                
+                state.total -= Number(action.payload.price)
+                toast.success('Plate was deleted successfully ')
+
             } catch (error) {
                 console.log('Error while deleting a menu from panier : ', error);
 
@@ -53,5 +58,5 @@ export const PanierSlice = createSlice({
     // extraReducers
 })
 
-export const { Add , Delete } = PanierSlice.actions
+export const { Add, Delete } = PanierSlice.actions
 export default PanierSlice.reducer

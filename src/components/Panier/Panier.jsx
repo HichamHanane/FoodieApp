@@ -4,7 +4,7 @@ import PanierCard from '../PanierCard/PanierCard'
 import { useSelector } from 'react-redux'
 import { CgUnavailable } from 'react-icons/cg';
 function Panier() {
-    let { panier_list } = useSelector((state) => state.panier);
+    let { panier_list,total } = useSelector((state) => state.panier);
     const displatPanierCards = panier_list?.map((p, index) => <PanierCard menu={p} key={index}/>)
     return (
         <div className='panier_section'>
@@ -25,6 +25,9 @@ function Panier() {
                 }
 
 
+            </div>
+            <div className="panier_total">
+                <p className="total">Total : {total}$</p>
             </div>
         </div>
     )

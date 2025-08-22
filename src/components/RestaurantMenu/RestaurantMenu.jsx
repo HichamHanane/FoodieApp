@@ -28,7 +28,7 @@ function RestaurantMenu() {
                 <p className="food_name">{menu?.['Food Name']}</p>
                 <div className="menu_card_bottom">
                     <p className="food_price">{menu?.Price}$</p>
-                    <button onClick={()=>dispatch(Add(menu))}><FaPlus />Ajouter au panier</button>
+                    <button onClick={()=>dispatch(Add(menu))}><FaPlus />Add to Cart</button>
                 </div>
 
             </div>
