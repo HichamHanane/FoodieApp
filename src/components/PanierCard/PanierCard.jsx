@@ -10,7 +10,7 @@ function PanierCard({ menu }) {
         <div className="panier_card">
             {
                 menu?.Photo == "" ? <div className="panier_no_photo">photo Unavailable</div>
-                    : <img src="/images/restaurant (2).jpg" alt="menu image" srcset="" width="100px" />
+                    : <img src={menu?.Photo} alt="menu image" srcset="" width="100px" />
             }
             <div className="panier_food_name_price">
                 <p className="panier_food_name">{menu?.['Food Name']}</p>

@@ -28,7 +28,7 @@ function RestaurantMenu() {
                 <p className="food_name">{menu?.['Food Name']}</p>
                 <div className="menu_card_bottom">
                     <p className="food_price">{menu?.Price}$</p>
-                    <button onClick={()=>dispatch(Add(menu))}><FaPlus />Add to Cart</button>
+                    <button onClick={() => dispatch(Add(menu))}><FaPlus />Add to Cart</button>
                 </div>
 
             </div>
@@ -43,21 +43,23 @@ function RestaurantMenu() {
         setMenu(restu_menu)
         // dispatch(getRestaurantMenu(id));
     }, [])
-    
+
     return (
         <>
             <div className='restaurant_menu_section'>
                 <div className="restaurant_menu_header">
-                    <h1>Restaurant's Menu </h1>
+                    <h1>Restaurant's Menu {resturantMenu?.isloading} </h1>
                 </div>
                 <div className="menu_container">
                     {
-                        menu?.length == 0
-                            ? <div className='no_menu_available'>
-                                <CgUnavailable color='#5B913B' size="50px" />
-                                <p>menu Unavailable now </p>
-                            </div>
-                            : displayMenu
+                        resturantMenu?.isloading
+                            ? <p>Loading restaurant menu...</p>
+                            : menu?.length == 0
+                                ? <div className='no_menu_available'>
+                                    <CgUnavailable color='#5B913B' size="50px" />
+                                    <p>menu Unavailable now </p>
+                                </div>
+                                : displayMenu
                     }
 
 

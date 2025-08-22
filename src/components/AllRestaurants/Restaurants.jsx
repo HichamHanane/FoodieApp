@@ -8,8 +8,24 @@ import { Link } from 'react-router-dom'
 import { BiMap } from 'react-icons/bi'
 
 function Restaurants() {
-  const { restaurants } = useSelector((state) => state.restaurant)
+  const { restaurants, isloading, error } = useSelector((state) => state.restaurant)
   const dispatch = useDispatch()
+
+  const DisplaySkeletonCard = () => {
+    return Array.from({ length: 6 }).map((_, index) => (
+      <div class="card-skeleton" key={index}>
+        <div class="skeleton-image"></div>
+        <div class="skeleton-content">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-line-1"></div>
+          <div class="skeleton-line-2"></div>
+        </div>
+      </div>
+    ))
+  }
+
+  const renderRestaurants = restaurants?.map((restaurant, index) => <RestaurantCard key={index} restaurant={restaurant} />)
+
   useEffect(() => {
     dispatch(getRestaurants())
   }, [])
@@ -23,13 +39,17 @@ function Restaurants() {
       <div className="restaurant_card_container">
 
         {
-          restaurants?.map((restaurant, index) => {
-            return (
-              <RestaurantCard key={index} restaurant={restaurant} />
-            )
-          })
+          isloading
+            ? DisplaySkeletonCard()
+            : restaurants.length == 0
+              ? <p>no restaurant avalaible now</p>
+              : renderRestaurants
+
         }
       </div>
+      {
+        error != null ? <p>Error : {error}</p> : null
+      }
 
       {/* <div className="restaurant_card_container">
         <div className='restaurant_card_1'>
@@ -66,7 +86,7 @@ function Restaurants() {
         </div>
       </div> */}
 
-      
+
     </section>
   )
 }

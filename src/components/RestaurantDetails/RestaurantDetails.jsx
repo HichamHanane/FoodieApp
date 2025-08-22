@@ -24,7 +24,7 @@ function RestaurantDetails() {
           <div className='content_container'>
              <h1 className='details_restaurant_name'>{data?.name}</h1> 
              <p className="details_full_adresse"><BiMap color='#C9392F'/>  {data?.address1}</p>
-             <img src={`/images/restaurant (${Math.floor(Math.random() * 4)}).jpg`} alt="restaurant image" className="deatils_image"  width="600" height="300"/>
+             <img src={data?.photo_url?.replace("ms","o")} alt="restaurant image" className="deatils_image"  width="600" height="300"/>
              {/* <img src={data?.photo_url} alt="" className="deatils_image"  width="600" height="350"/> */}
 
              <div className="more_restaurant_information">

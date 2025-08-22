@@ -39,9 +39,12 @@
     border-radius: 50%;
     color: white;
     font-family: 'Poppins', Times, serif;
-    font-size: 0.5rem;
-    font-weight: bold;
-
+    font-size: 0.4rem;
+    font-weight: bolder;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    translate: 10px -5px;
 }
 
 .nav_link {

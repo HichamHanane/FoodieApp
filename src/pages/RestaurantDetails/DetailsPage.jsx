@@ -3,6 +3,7 @@ import './DetailsPage.css'
 import RestaurantDetails from '../../components/RestaurantDetails/RestaurantDetails'
 import Navbar from '../../components/Navbar/Navbar'
 import RestaurantMenu from '../../components/RestaurantMenu/RestaurantMenu'
+import Footer from '../../components/Footer/Footer'
 
 function DetailsPage() {
     return (
@@ -10,6 +11,7 @@ function DetailsPage() {
             <Navbar />
             <RestaurantDetails />
             <RestaurantMenu />
+            <Footer />
         </div>
     )
 }

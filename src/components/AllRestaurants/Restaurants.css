@@ -86,3 +86,64 @@
     margin-top: 50px;
 }
 
+.card-skeleton {
+  width: 300px; /* Adapte la largeur à ta carte */
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.skeleton-image {
+  height: 200px; /* Hauteur de l'image de la carte */
+  background-color: #d3d3d3; /* Gris clair pour l'image */
+}
+
+.skeleton-content {
+  padding: 16px;
+}
+
+.skeleton-title {
+  height: 20px;
+  width: 70%;
+  background-color: #d3d3d3; /* Gris clair pour le titre */
+  margin-bottom: 10px;
+}
+
+.skeleton-line-1,
+.skeleton-line-2 {
+  height: 12px;
+  background-color: #d3d3d3; /* Gris clair pour les lignes */
+  margin-bottom: 8px;
+}
+
+.skeleton-line-1 {
+  width: 90%;
+}
+
+.skeleton-line-2 {
+  width: 85%;
+}
+
+/* Animation de chargement avec la nouvelle couleur */
+.card-skeleton div {
+  background-image: linear-gradient(
+    90deg,
+    #d3d3d3 0px,
+    #5b913b 40px,
+    #d3d3d3 80px
+  );
+  background-size: 200% 100%;
+  animation: loading-animation 1.5s infinite linear;
+}
+
+@keyframes loading-animation {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+

@@ -3,6 +3,7 @@ import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import Restaurants from '../../components/AllRestaurants/Restaurants'
+import Footer from '../../components/Footer/Footer'
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
       <Navbar />
       <HeroSection />
       <Restaurants />
+      <Footer/>
     </div>
   )
 }

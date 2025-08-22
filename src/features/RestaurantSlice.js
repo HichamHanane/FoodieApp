@@ -13,7 +13,7 @@ export const getRestaurants = createAsyncThunk("restaurant/getRestaurants", asyn
             params: {
                 location: 'New York, NY',
                 search_term: 'Restaurants',
-                limit: '10',
+                limit: '15',
                 offset: '0',
                 business_details_type: 'basic'
             },
@@ -75,6 +75,8 @@ export const getRestaurantMenu = createAsyncThunk('restaurant/getRestaurantMenu'
         let response = await axios.get(options.url, { params: options.params, headers: options.headers });
         console.log('Restaurant menu response :', response);
         let get20Menu = response.data.menus.slice(0,20);
+        console.log('20 menu :',get20Menu);
+        
         localStorage.setItem('restaurant-menu', JSON.stringify(get20Menu))
         return get20Menu;
     } catch (error) {
@@ -143,16 +145,21 @@ export const RestaurantSlice = createSlice({
 
             .addCase(getRestaurantMenu.pending,(state,action)=>{
                 console.log('restaurant menu pending :' , action);
+                console.log('restaurant menu pending current state:' , state.resturantMenu.isloading);
                 state.resturantMenu.isloading=true;
             })
             .addCase(getRestaurantMenu.fulfilled,(state,action)=>{
-                console.log('restaurant fulfilled :', action);
+                console.log('restaurant menu fulfilled :', action);
+                console.log('restaurant menu fulfilled current state:' , state.resturantMenu.isloading);
+
                 state.resturantMenu.isloading=false;
                 state.resturantMenu.menu=action.payload;
                 
             })
             .addCase(getRestaurantMenu.rejected,(state,action)=>{
                 console.log('Restaurant menu rejected :',action);
+                console.log('restaurant menu rejected current state:' , state.resturantMenu.isloading);
+
                 // state.resturantMenu.error=
                 state.resturantMenu.isloading=false; 
             })

@@ -10,7 +10,7 @@ function RestaurantCard({ restaurant }) {
 
 
         <div className='restaurant_card_1'>
-            <img src={`public/images/restaurant (${Math.floor(Math.random() * 4)}).jpg`} alt="restaurant image" />
+            <img src={restaurant?.photo_url?.replace("ms","o")?.replace("60s", "o")} alt="restaurant image" />
             {/* <img src={restaurant?.photo_url} alt="restaurant image" /> */}
             <Link to={`/restaurant-details/${restaurant?.id}`} className='restaurant_title_1'>{restaurant?.name}</Link>
             <div className="city_and_rating">

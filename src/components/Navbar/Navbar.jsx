@@ -22,11 +22,12 @@ function Navbar() {
                             !openPanier ? <MdShoppingBag className='icon_cart' /> : <AiOutlineClose className='icon_cart' />
                         }
                     </div>
-                    <div className="command_number">
-                        {
-                            !openPanier ? number_of_commands : null
-                        }
-                    </div>
+                    {
+                        !openPanier ? <div className="command_number">{number_of_commands}</div>
+                        : null
+                    }
+                    
+                    
                 </nav>
             </header>
             {
